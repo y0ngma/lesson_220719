@@ -6,11 +6,10 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 
 from sklearn import svm, datasets
-from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import label_binarize
 from sklearn.multiclass import OneVsRestClassifier
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve, auc, roc_auc_score
 
 # Import some data to play with
 iris = datasets.load_iris()
