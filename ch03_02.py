@@ -9,6 +9,14 @@
 # (5, 10) 의 최대값은? -> 10
 
 class Vector(object):
+    """
+     The following methods can be defined to emulate numeric objects. 
+    These methods are called to implement the binary arithmetic(산수) 
+    operations (+,-,*...). For instance, to evaluate the expression "x+y",
+    where "x" is an instance of a class that has an __add__() method, 
+    type(x).__add__(x, y) is called. 
+    출처: https://docs.python.org/3/reference/datamodel.html#special-method-names
+    """
     # def __init__(self, x, y):
     #     self._x, self._y = ...
     def __init__(self, *args):
@@ -22,7 +30,8 @@ class Vector(object):
 
     def __repr__(self):
         """return the vector informations."""
-        return "Vector(%r, %r)" % (self._x, self._y)
+        return "Vector({},{})".format(self._x, self._y)
+        # return "Vector(%r, %r)" % (self._x, self._y)
 
     def __add__(self, other):
         """Return the vector addition of self and other"""
